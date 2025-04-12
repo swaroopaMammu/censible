@@ -17,6 +17,9 @@
         <action
             android:id="@+id/action_welcomeScreen_to_dashBoardScreen"
             app:destination="@id/dashBoardScreen" />
+        <action
+            android:id="@+id/action_welcomeScreen_to_addNewExpense"
+            app:destination="@id/addNewExpense" />
     </fragment>
     <fragment
         android:id="@+id/dashBoardScreen"

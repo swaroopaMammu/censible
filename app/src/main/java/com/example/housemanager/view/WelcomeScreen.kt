@@ -24,7 +24,7 @@ class WelcomeScreen : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding?.enterB?.setOnClickListener{
-            findNavController().navigate(R.id.action_welcomeScreen_to_dashBoardScreen)
+            findNavController().navigate(R.id.action_welcomeScreen_to_addNewExpense)
         }
     }
 }

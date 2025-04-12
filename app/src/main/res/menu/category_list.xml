@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/category_rent" android:title="Rent" />
+    <item android:id="@+id/category_transportation" android:title="Transportation" />
+    <item android:id="@+id/category_utilities" android:title="Utilities" />
+    <item android:id="@+id/category_medical" android:title="Medical" />
+</menu>

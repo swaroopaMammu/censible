@@ -2,6 +2,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
+ <ScrollView
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:fillViewport="true">
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -23,8 +28,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp__20"
         android:background="@drawable/grey_border_box_bgd"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/addNewButton"
         app:layout_constraintTop_toBottomOf="@+id/newExpenseH"
         app:layout_constraintVertical_bias="1.0"
         tools:layout_editor_absoluteX="30dp" />
@@ -84,9 +90,9 @@
         android:layout_marginTop="@dimen/dp_5"
         />
     <TextView
+        android:id="@+id/category_text"
         android:layout_marginTop="@dimen/dp_10"
         android:layout_marginStart="@dimen/dp_20"
-        android:id="@+id/category_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/amount_value"
@@ -95,7 +101,87 @@
         android:textColor="@color/title_blue"
         android:text="@string/category_text"
         />
-
-
+    <TextView
+        android:id="@+id/category_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/border_box"
+        app:layout_constraintEnd_toEndOf="@+id/border_box"
+        android:layout_marginHorizontal="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@+id/category_text"
+        android:background="@drawable/grey_border_box_bgd"
+        android:padding="@dimen/dp_8"
+        android:textSize="@dimen/sp_14"
+        android:drawableEnd="@drawable/baseline_arrow_drop_down"
+        android:layout_marginTop="@dimen/dp_5"
+        />
+    <TextView
+        android:id="@+id/date_text"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/category_value"
+        app:layout_constraintStart_toStartOf="@+id/border_box"
+        style="@style/CustomTitleTextSmall"
+        android:textColor="@color/title_blue"
+        android:text="@string/date_text"
+        />
+    <TextView
+        android:id="@+id/date_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/border_box"
+        app:layout_constraintEnd_toEndOf="@+id/border_box"
+        android:layout_marginHorizontal="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@+id/date_text"
+        android:background="@drawable/grey_border_box_bgd"
+        android:padding="@dimen/dp_8"
+        android:textSize="@dimen/sp_14"
+        android:drawablePadding="@dimen/dp_10"
+        android:drawableStart="@drawable/baseline_date_range"
+        android:layout_marginTop="@dimen/dp_5"
+        />
+    <TextView
+        android:id="@+id/note_text"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/date_value"
+        app:layout_constraintStart_toStartOf="@+id/border_box"
+        style="@style/CustomTitleTextSmall"
+        android:textColor="@color/title_blue"
+        android:text="@string/note_text"
+        />
+    <EditText
+        android:id="@+id/note_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your notes here"
+        android:inputType="textMultiLine"
+        android:gravity="top|start"
+        android:minLines="4"
+        android:maxLines="4"
+        android:maxLength="100"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintStart_toStartOf="@+id/border_box"
+        app:layout_constraintEnd_toEndOf="@+id/border_box"
+        app:layout_constraintTop_toBottomOf="@+id/note_text"
+        android:layout_marginTop="@dimen/dp_5"
+        android:background="@drawable/grey_border_box_bgd"
+        android:layout_marginHorizontal="@dimen/dp_20"
+        android:padding="12dp" />
+   <Button
+       android:id="@+id/addNewButton"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="@string/new_expense_title"
+       app:layout_constraintTop_toBottomOf="@+id/note_value"
+       android:background="@color/title_blue"
+       android:textColor="@color/text_white"
+       android:layout_marginHorizontal="@dimen/dp_20"
+       android:layout_marginTop="@dimen/dp_50"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
+ </ScrollView>
 </layout>

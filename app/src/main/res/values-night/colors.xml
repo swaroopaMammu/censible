@@ -4,6 +4,6 @@
     <color name="title_blue">#D8DDE0</color>
     <color name="grey">#F2EFE7</color>
     <color name="white">#FFFF</color>
-    <color name="text_white">#0000</color>
-    <color name="black">#0000</color>
+    <color name="text_white">#000000</color>
+    <color name="black">#000000</color>
 </resources>
