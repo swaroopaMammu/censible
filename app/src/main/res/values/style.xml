@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomTitleTextLarge" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/sp_24</item>
+        <item name="android:fontFamily">sans-serif-condensed-medium</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="CustomTitleTextMedium" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:fontFamily">sans-serif-condensed-medium</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="CustomTitleTextSmall" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:fontFamily">sans-serif-condensed-medium</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>
