@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeScreen">
+    <fragment
+        android:id="@+id/addNewExpense"
+        android:name="com.example.housemanager.view.AddNewExpense"
+        android:label="fragment_add_new_expense"
+        tools:layout="@layout/fragment_add_new_expense" />
+    <fragment
+        android:id="@+id/welcomeScreen"
+        android:name="com.example.housemanager.view.WelcomeScreen"
+        android:label="fragment_welcome_screen"
+        tools:layout="@layout/fragment_welcome_screen" >
+        <action
+            android:id="@+id/action_welcomeScreen_to_dashBoardScreen"
+            app:destination="@id/dashBoardScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashBoardScreen"
+        android:name="com.example.housemanager.DashBoardScreen"
+        android:label="fragment_dash_board_screen"
+        app:popUpTo="@id/dashBoardScreen"
+        tools:layout="@layout/fragment_dash_board_screen" />
+    <fragment
+        android:id="@+id/analysisScreen"
+        android:name="com.example.housemanager.AnalysisScreen"
+        android:label="fragment_analysis_screen"
+        tools:layout="@layout/fragment_analysis_screen" />
+    <fragment
+        android:id="@+id/mainCategoryDetailScreen"
+        android:name="com.example.housemanager.MainCategoryDetailScreen"
+        android:label="fragment_main_category_detail_screen"
+        tools:layout="@layout/fragment_main_category_detail_screen" />
+    <fragment
+        android:id="@+id/subCategoryDetailScreen"
+        android:name="com.example.housemanager.SubCategoryDetailScreen"
+        android:label="fragment_sub_category_detail_screen"
+        tools:layout="@layout/fragment_sub_category_detail_screen" />
+</navigation>

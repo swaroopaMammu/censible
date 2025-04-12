@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Centsible</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="welcome_headline">Welcome to Centsible</string>
+    <string name="hello_blank_fragment">Welcome to Centsible</string>
+    <string name="welcome_subtitle">Smart. Simple. Sensible</string>
+    <string name="start_button">Start</string>
+    <string name="welcome_description">Take control of your home finances with ease. Centsible helps you manage everything—from rent, bills, groceries, and shopping to savings and investments—all in one place.\n\n
+        Track your weekly, monthly, and yearly expenses, set budgets, and get powerful insights into your spending habits. Whether your are splitting household costs or planning future investments, Centsible keeps it clear, simple, and on track.\n\n
+        Let your cents make sense.\n\n
+        Get started and make every rupee count.
+</string>
+</resources>
