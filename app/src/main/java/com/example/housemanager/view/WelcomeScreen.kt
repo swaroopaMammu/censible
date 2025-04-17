@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.example.housemanager.R
 import com.example.housemanager.databinding.FragmentWelcomeScreenBinding
@@ -24,7 +25,7 @@ class WelcomeScreen : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding?.enterB?.setOnClickListener{
-            findNavController().navigate(R.id.action_welcomeScreen_to_addNewExpense)
+            findNavController().navigate(R.id.action_welcomeScreen_to_mainCategoryDetailScreen)
         }
     }
 }

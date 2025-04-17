@@ -15,11 +15,15 @@
         android:label="fragment_welcome_screen"
         tools:layout="@layout/fragment_welcome_screen" >
         <action
+            app:popUpTo="@id/welcomeScreen"
+            app:popUpToInclusive="true"
             android:id="@+id/action_welcomeScreen_to_dashBoardScreen"
             app:destination="@id/dashBoardScreen" />
         <action
-            android:id="@+id/action_welcomeScreen_to_addNewExpense"
-            app:destination="@id/addNewExpense" />
+            app:popUpTo="@id/welcomeScreen"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_welcomeScreen_to_mainCategoryDetailScreen"
+            app:destination="@id/mainCategoryDetailScreen" />
     </fragment>
     <fragment
         android:id="@+id/dashBoardScreen"
@@ -29,14 +33,21 @@
         tools:layout="@layout/fragment_dash_board_screen" />
     <fragment
         android:id="@+id/analysisScreen"
-        android:name="com.example.housemanager.AnalysisScreen"
+        android:name="com.example.housemanager.view.AnalysisScreen"
         android:label="fragment_analysis_screen"
         tools:layout="@layout/fragment_analysis_screen" />
     <fragment
         android:id="@+id/mainCategoryDetailScreen"
-        android:name="com.example.housemanager.MainCategoryDetailScreen"
+        android:name="com.example.housemanager.view.MainCategoryDetailScreen"
         android:label="fragment_main_category_detail_screen"
-        tools:layout="@layout/fragment_main_category_detail_screen" />
+        tools:layout="@layout/fragment_main_category_detail_screen" >
+        <action
+            android:id="@+id/action_mainCategoryDetailScreen_to_addNewExpense"
+            app:destination="@id/addNewExpense" />
+        <action
+            android:id="@+id/action_mainCategoryDetailScreen_to_analysisScreen"
+            app:destination="@id/analysisScreen" />
+    </fragment>
     <fragment
         android:id="@+id/subCategoryDetailScreen"
         android:name="com.example.housemanager.SubCategoryDetailScreen"

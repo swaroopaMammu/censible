@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="model"
+            type="com.example.housemanager.view.model.ExpenseDisplayModel" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:background="@drawable/grey_border_box_bgd"
+    android:layout_margin="@dimen/dp_5"
+    android:paddingVertical="@dimen/dp_10"
+    android:paddingHorizontal="@dimen/dp_10"
+    android:layout_height="wrap_content">
+   <TextView
+       android:id="@+id/title"
+       android:layout_width="@dimen/dp_0"
+       android:layout_height="wrap_content"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toStartOf="@+id/amount"
+       app:layout_constraintTop_toTopOf="parent"
+       style="@style/CustomTitleTextSmall"
+
+       android:text="@{model.title}"/>
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        style="@style/CustomTitleTextSmall"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="@{model.date}"/>
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/title"
+        style="@style/CustomTitleTextSmall"
+        android:text="@{model.amount}"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
